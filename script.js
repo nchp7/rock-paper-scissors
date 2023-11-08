@@ -1,24 +1,33 @@
-function gameRound(playerSelection, computerSelection) {
+function getComputerChoice() {
+    
+    const compChoice = ["rock", "paper", "scissors"];
+    return compChoice[Math.floor(Math.random() * compChoice.length)];
+    
+}
 
-    let playerSelection = prompt("Choose a value between: Rock, Paper and Scissors").toLowerCase();
-
-    let computerSelection = getComputerChoice();
-    console.log(computerSelection);
+function playRound(playerSelection, computerSelection) {
 
     if (playerSelection == computerSelection) {
-        alert("It's a Draw!");
-    } else if (((playerSelection == "Rock" ) && (computerSelection == "Paper" )) || ((playerSelection == "Paper") && (computerSelection == "Scissors")) || ((playerSelection == "Scissors") && (computerSelection == "Rock")))  {
-        alert("Computer WINS!");
+        return "It's a Tie";
+    } else if (playerSelection == "rock" && computerSelection == "scissors") {
+        return "You win! Rock beats Scissors";
+    } else if (playerSelection == "paper" && computerSelection == "rock") {
+        return "You win! Paper beats Rock";
+    } else if (playerSelection == "scissors" && computerSelection == "paper") {
+        return "You win! Scissors beats Paper";
     } else {
-        alert("User WINS!");
+        return "You Lose! ${computerSelection} beats ${playerSelection}";
+    }
+}
+
+function game() {
+    let rounds = 5;
+    for (let i = 0; i >= 5; i++) {
+        if (rounds = i) {}
     }
 
 }
 
-function getComputerChoice() {
-    
-    const pcChoice = ["Rock", "Paper", "Scissors"];
-    const randomChoice = pcChoice[Math.floor(Math.random() * pcChoice.length)];
-
-    console.log(randomChoice);
-}
+const playerSelection = prompt("Choose one of this three values 'Rock, Paper and Scissors': ").toLowerCase();
+const computerSelection = getComputerChoice();
+console.log(playRound(playerSelection, computerSelection));
