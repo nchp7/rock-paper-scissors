@@ -1,28 +1,42 @@
+/* body {
+    border: 1px solid red;
+} */
+
 .results-container {
     display: flex;
-    justify-content: space-between; /* Adjust as needed */
+    justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+}
+
+.result-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5%;
 }
 
 .gameResultView {
-    border: 1px solid red;
-    margin: 10px; /* Adjust the margin as needed */
+    border: 1px solid black;
+    border-radius: 5rem;
+    margin: 5px; /* Adjust the margin as needed */
     height: 200px;
-    width: 40%;
+    width: 250px;
+}
+
+.scoreCounter {
+    margin-top: 5px; /* Adjust the margin as needed */
 }
 
 .button-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px; /* Adjust the margin as needed */
+    margin-top: 20px;
 }
 
 .button-container button {
-    margin: 0 10px; /* Adjust the margin as needed */
-}
-
-button {
+    margin: 0 5px; /* Adjust the margin as needed */
     height: 50px;
     width: 100px;
     font-weight: 900;
@@ -40,7 +54,7 @@ button {
 }
 
 #scissorsButton {
-    background-color: red;
     background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
     color: black;
 }
+
