@@ -1,0 +1,13 @@
+.resultContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+}
+
+.gameResultView { 
+    border: 1px solid red;
+    margin: 10%;
+    height: 300px;
+    width: 40%;
+}

@@ -19,22 +19,30 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-function game() {
-    var rounds = 0;
-    var playerScore = 0;
-    var computerScore = 0;
-    
-    while(rounds < 5) {
-        const playerSelection = prompt("Choose one of this three values 'Rock, Paper and Scissors': ").toLowerCase();
-        const computerSelection = getComputerChoice();
-
-        const result = playRound(playerSelection, computerSelection);
-        console.log(result);
-        
-        rounds++;
-       
+function updateScores(result) {
+    if (result.includes("WIN")) {
+        playerScore++;
+    } else if (result.includes("Lose")) {
+        computerScore++;
     }
+    console.log(`Player Score: ${playerScore}, Computer Score: ${computerScore}`);
 }
 
+function game(playerSelection) {
+    const computerSelection = getComputerChoice();
+    const result = playRound(playerSelection, computerSelection);
+    console.log(result);
+    updateScores(result);
+}
 
-game();
+const buttons = document.querySelectorAll('button');
+
+buttons.forEach(button => {
+    button.addEventListener('click', (event) => {
+        const playerSelection = event.target.innerText.toLowerCase();
+        game(playerSelection);
+    });
+});
+
+var playerScore = 0;
+var computerScore = 0;
