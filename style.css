@@ -1,13 +1,46 @@
-.resultContainer {
+.results-container {
+    display: flex;
+    justify-content: space-between; /* Adjust as needed */
+    align-items: center;
+}
+
+.gameResultView {
+    border: 1px solid red;
+    margin: 10px; /* Adjust the margin as needed */
+    height: 200px;
+    width: 40%;
+}
+
+.button-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: auto;
+    margin-top: 20px; /* Adjust the margin as needed */
 }
 
-.gameResultView { 
-    border: 1px solid red;
-    margin: 10%;
-    height: 300px;
-    width: 40%;
+.button-container button {
+    margin: 0 10px; /* Adjust the margin as needed */
+}
+
+button {
+    height: 50px;
+    width: 100px;
+    font-weight: 900;
+    border-radius: 5rem;
+}
+
+#rockButton {
+    background-color: gray;
+    color: black;
+}
+
+#paperButton {
+    background-color: white;
+    color: black;
+}
+
+#scissorsButton {
+    background-color: red;
+    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    color: black;
 }
