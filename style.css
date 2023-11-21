@@ -24,8 +24,16 @@
     width: 250px;
 }
 
-.scoreCounter {
-    margin-top: 5px; /* Adjust the margin as needed */
+.playerScoreCounter,
+.computerScoreCounter {
+    margin-top: 5px;
+    padding-right: 30px;
+}
+
+.playerScoreCounter,
+.computerLivesCounter {
+    margin-top: 5px;
+    padding-right: 30px;
 }
 
 .button-container {
@@ -58,3 +66,8 @@
     color: black;
 }
 
+#playerImg, 
+#computerImg {
+    width: 250px;
+    height: 200px;
+}
