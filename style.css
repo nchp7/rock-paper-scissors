@@ -27,13 +27,13 @@
 .playerScoreCounter,
 .computerScoreCounter {
     margin-top: 5px;
-    padding-right: 30px;
+    padding-right: 20px;
 }
 
-.playerScoreCounter,
+.playerLivesCounter,
 .computerLivesCounter {
     margin-top: 5px;
-    padding-right: 30px;
+    padding-right: 20px;
 }
 
 .button-container {
